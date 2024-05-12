@@ -23,7 +23,6 @@ app.get('/*', (req, res, next) => {
         console.error(`Error serving file: ${filePath}`, err);
         res.status(500).send('Internal Server Error');
       } else {
-        console.log(`Served file: ${cleanedPath}`);
       }
     });
   });
