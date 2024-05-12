@@ -1,0 +1,260 @@
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Catholic Wolf">
+  <meta property="og:description" content="Catholic Apologetics">
+  <meta property="og:image" content="https://thejesuitpost.org/wp-content/uploads/2020/09/20200107T1033-POPE-CALENDAR-BARI-600408_preview.jpeg">
+  <title>CatholicWolf</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    header {
+      background: linear-gradient(to right, #333, #3498db);
+      color: #fff;
+      padding: 60px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 48px;
+      font-family: 'Playfair Display', serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: 24px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://via.placeholder.com/1920x1080');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .author-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .author-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 20px;
+    }
+
+    .author-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .author-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .author-name {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .post-date {
+      font-size: 14px;
+      color: #666;
+    }
+
+    h3 {
+      color: #333;
+      font-size: 32px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 0;
+      padding: 20px 40px; /* Increased padding to accommodate quotation marks */
+      background-color: #f8f8f8;
+      border-left: 5px solid #3498db;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    blockquote::before {
+      content: "\201C"; /* Unicode for left double quotation mark */
+      font-size: 36px; /* Reduced font size */
+      color: #3498db;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      line-height: 1;
+    }
+
+    blockquote::after {
+      content: "\201D"; /* Unicode for right double quotation mark */
+      font-size: 36px; /* Reduced font size */
+      color: #3498db;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      line-height: 1;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    italics {
+      font-style: italic;
+    }
+
+    .thumbnail {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 700;
+      align-self: flex-start;
+      margin-top: 20px;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    a::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #3498db;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    a:hover {
+      color: #2980b9;
+    }
+
+    a:hover::before {
+      transform: scaleX(1);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: #fff;
+      font-size: 24px;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #3498db;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+</head>
+<body>
+  <header>
+    <h1>CatholicWolf</h1>
+    <h2>Catholic Apologetics</h2>
+  </header>
+  <main>
+    <div class="author-info">
+      <div class="author-image">
+        <img src="https://via.placeholder.com/60x60" alt="Author Image">
+      </div>
+      <div class="author-details">
+        <div class="author-name">John Doe</div>
+        <div class="post-date"><i class="fas fa-calendar-alt"></i> May 11, 2024</div>
+      </div>
+    </div>
+    <img class="thumbnail" src="https://via.placeholder.com/800x400" alt="Post Thumbnail">
+    <h3>The Truth About Catholic Doctrine</h3>
+    <p>The Catholic Church has a rich and <strong>profound</strong> tradition of doctrine <italics>that</italics> has been passed down through the centuries. At the heart of Catholic doctrine is the belief in the <strong>Holy Trinity</strong> – the Father, the Son, and the Holy Spirit – as well as the <strong>divinity of Jesus Christ</strong> and His role as the Savior of humanity.</p>
+    <blockquote>"The Catholic Church is the one true Church founded by Jesus Christ, and it is our duty to defend and uphold its teachings." - St. John Paul II</blockquote>
+    <p>One of the core teachings of the Catholic Church is the <strong>Real Presence</strong> of Christ in the Eucharist. Catholics believe that during the consecration of the Mass, the bread and wine are <italics>transubstantiated</italics> into the Body and Blood of Christ. This belief is rooted in the words of Jesus Himself, who said, "This is my body" and "This is my blood" (Matthew 26:26-28).</p>
+    <h3>Answering Common Objections</h3>
+    <p>Critics of the Catholic Church often raise objections to its teachings and practices. However, many of these objections stem from <strong>misunderstandings</strong> or <strong>misconceptions</strong>. It is important to address these objections with <italics>clarity</italics> and <italics>charity</italics>, always seeking to <strong>defend the truth</strong> while respecting the dignity of those who disagree.</p>
+    <blockquote>"The truth is like a lion; you don't have to defend it. Let it loose; it will defend itself." - St. Augustine</blockquote>
+    <p>One common objection is the belief that Catholics <strong>worship</strong> Mary and the saints. However, this is a <italics>misunderstanding</italics>. Catholics <strong>venerate</strong> Mary and the saints, which means to honor and respect them, but they do not <italics>worship</italics> them. Worship is reserved for God alone.</p>
+  </main>
+  <footer>
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    © 2024 Catholic Wolf
+  </footer>
+
+</body></html>
