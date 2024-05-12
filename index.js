@@ -1,13 +1,20 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
+
 const app = express();
 const port = 3000;
-const fs = require('fs'); // Import the fs module for file system operations
 
-const verificationFile = 'google-site-verification.txt';
-const verificationContent = 'google-site-verification=T4_xlV-F9irGNAaIXzrsoIzwGH2N33AgYKy_bTnA6aY';
+// CNAME record details
+const cnameLabel = 'qrmnxtg5fgi2';
+const cnameDestination = 'gv-ddit654ebh7jyl.dv.googlehosted.com';
 
-fs.writeFileSync(path.join(__dirname, verificationFile), verificationContent);
+// Create the CNAME record file
+const cnameFile = 'CNAME';
+const cnameContent = `${cnameLabel} ${cnameDestination}`;
+
+// Write the CNAME record to the file
+fs.writeFileSync(path.join(__dirname, cnameFile), cnameContent);
 
 app.use(express.static(path.join(__dirname, 'http')));
 
