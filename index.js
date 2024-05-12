@@ -5,16 +5,13 @@ const fs = require('fs');
 const app = express();
 const port = 3000;
 
-// CNAME record details
-const cnameLabel = 'qrmnxtg5fgi2';
-const cnameDestination = 'gv-ddit654ebh7jyl.dv.googlehosted.com';
-
-// Create the CNAME record file
-const cnameFile = 'CNAME';
-const cnameContent = `${cnameLabel} ${cnameDestination}`;
-
-// Write the CNAME record to the file
-fs.writeFileSync(path.join(__dirname, cnameFile), cnameContent);
+app.get('/*', (req, res, next) => {
+  if (req.path.endsWith('.html')) {
+    const redirectPath = req.path.slice(0, -5);
+    return res.redirect(301, redirectPath);
+  }
+  next();
+});
 
 app.use(express.static(path.join(__dirname, 'http')));
 
