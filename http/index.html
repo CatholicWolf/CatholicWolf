@@ -1,0 +1,303 @@
+<html><head>
+  <title>CatholicWolf</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    header {
+      background: linear-gradient(to right, #333, #3498db);
+      color: #fff;
+      padding: 60px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 48px;
+      font-family: 'Playfair Display', serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: 24px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://via.placeholder.com/1920x1080');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 40px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h3 {
+      color: #333;
+      font-size: 32px;
+      font-family: 'Playfair Display', serif;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    h3 i {
+      margin-right: 10px;
+      color: #3498db;
+      font-size: 28px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 30px;
+    }
+
+    li {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .article-image {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .article-image:hover::before {
+      opacity: 1;
+    }
+
+    .article-content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-title {
+      margin: 0;
+      font-size: 24px;
+      font-family: 'Playfair Display', serif;
+      color: #333;
+    }
+
+    .article-description {
+      margin-top: 10px;
+      color: #666;
+      flex-grow: 1;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 700;
+      align-self: flex-start;
+      margin-top: 20px;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    a::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #3498db;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    a:hover {
+      color: #2980b9;
+    }
+
+    a:hover::before {
+      transform: scaleX(1);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: #fff;
+      font-size: 24px;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #3498db;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+  <header>
+    <h1>CatholicWolf</h1>
+    <h2>Catholic Apologetics</h2>
+  </header>
+  <main>
+    <section>
+      <h3><i class="fas fa-book"></i> Recent Articles</h3>
+      <ul>
+        <li>
+          <div class="article-card">
+            <div class="article-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+            <div class="article-content">
+              <h3 class="article-title">The Truth About Catholic Doctrine</h3>
+              <p class="article-description">Explore the rich teachings and traditions of the Catholic Church in this insightful article.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="article-card">
+            <div class="article-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+            <div class="article-content">
+              <h3 class="article-title">Answering Common Objections to Catholicism</h3>
+              <p class="article-description">Gain a deeper understanding of the Catholic faith by addressing common misconceptions and objections.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="article-card">
+            <div class="article-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+            <div class="article-content">
+              <h3 class="article-title">The Beauty of Catholic Tradition</h3>
+              <p class="article-description">Discover the rich heritage and timeless beauty of Catholic traditions in this captivating article.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h3><i class="fas fa-star"></i> Popular Topics</h3>
+      <ul>
+        <li>
+          <div class="article-card">
+            <div class="article-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+            <div class="article-content">
+              <h3 class="article-title">The Papacy</h3>
+              <p class="article-description">Explore the role and significance of the Papacy in the Catholic Church.</p>
+              <a href="topic-papacy.html">View Articles</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="article-card">
+            <div class="article-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+            <div class="article-content">
+              <h3 class="article-title">The Sacraments</h3>
+              <p class="article-description">Discover the significance and meaning of the seven sacraments in the Catholic faith.</p>
+              <a href="topic-sacraments.html">View Articles</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="article-card">
+            <div class="article-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+            <div class="article-content">
+              <h3 class="article-title">Marian Devotion</h3>
+              <p class="article-description">Explore the Catholic Church's devotion to the Blessed Virgin Mary and its significance.</p>
+              <a href="topic-marian.html">View Articles</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    © 2024 Catholic Wolf
+  </footer>
+
+</body></html>
