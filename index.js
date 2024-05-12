@@ -6,11 +6,27 @@ const app = express();
 const port = 3000;
 
 app.get('/*', (req, res, next) => {
-  if (req.path.endsWith('.html')) {
-    const redirectPath = req.path.slice(0, -5);
-    return res.redirect(301, redirectPath);
-  }
-  next();
+  const filePath = path.join(__dirname, 'http', `${req.path}.html`);
+
+  fs.access(filePath, fs.constants.R_OK, (err) => {
+    if (err) {
+      // File doesn't exist or cannot be read
+      return next();
+    }
+
+    // Remove the .html extension from the URL
+    const cleanedPath = req.path.endsWith('.html') ? req.path.slice(0, -5) : req.path;
+
+    // Serve the file
+    res.sendFile(filePath, (err) => {
+      if (err) {
+        console.error(`Error serving file: ${filePath}`, err);
+        res.status(500).send('Internal Server Error');
+      } else {
+        console.log(`Served file: ${cleanedPath}`);
+      }
+    });
+  });
 });
 
 app.use(express.static(path.join(__dirname, 'http')));
