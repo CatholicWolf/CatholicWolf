@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 3000;
+const fs = require('fs'); // Import the fs module for file system operations
 
 const verificationFile = 'google-site-verification.txt';
 const verificationContent = 'google-site-verification=T4_xlV-F9irGNAaIXzrsoIzwGH2N33AgYKy_bTnA6aY';
